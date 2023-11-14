@@ -21,26 +21,35 @@ public class Game {
 	@Column(name = "game_year")
 	private int year;
 	private String genre;
-	private String plataforms;
-	private double score;
+	private String platforms;
 	private String imgUrl;
+	private Double score;
+	
+	@Column(columnDefinition =  "TEXT")
 	private String shortDescription;
-	private long Description;
+	@Column(columnDefinition = "TEXT")
+	private long longDescription;
 	
 	 public Game() {
 		 
 	 }
-	public Game(long id, String title, int year, String genre, String plataforms, double score, String imgUrl,
+	public Game(long id, String title, int year,Double score, String genre, String platforms, String imgUrl,
 			String shortDescription, long description) {
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.plataforms = plataforms;
+		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
-		Description = description;
+		longDescription = description;
+	}
+	public Double getScore() {
+		return score;
+	}
+	public void setScore(Double score) {
+		this.score = score;
 	}
 	public long getId() {
 		return id;
@@ -66,17 +75,11 @@ public class Game {
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
-	public String getPlataforms() {
-		return plataforms;
+	public String getPlatforms() {
+		return platforms;
 	}
-	public void setPlataforms(String plataforms) {
-		this.plataforms = plataforms;
-	}
-	public double getScore() {
-		return score;
-	}
-	public void setScore(double score) {
-		this.score = score;
+	public void setPlatforms(String plataforms) {
+		this.platforms = plataforms;
 	}
 	public String getImgUrl() {
 		return imgUrl;
@@ -90,11 +93,11 @@ public class Game {
 	public void setShortDescription(String shortDescription) {
 		this.shortDescription = shortDescription;
 	}
-	public long getDescription() {
-		return Description;
+	public long getlongDescription() {
+		return longDescription;
 	}
-	public void setDescription(long description) {
-		Description = description;
+	public void setlongDescription(long description) {
+		longDescription = description;
 	}
 	@Override
 	public int hashCode() {
