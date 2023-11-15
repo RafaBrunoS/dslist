@@ -28,7 +28,6 @@ INDEX VERSION 1.134+C:\JavaAlura\Dslistt\.metadata\.plugins\org.eclipse.jdt.core
 2164754006.index
 2742623771.index
 1254050033.index
-830647530.index
 4088011556.index
 860740949.index
 798675727.index
